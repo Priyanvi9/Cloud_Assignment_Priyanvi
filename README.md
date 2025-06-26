@@ -55,7 +55,7 @@ graph TD
 
 2.  **Create S3 Website Bucket:**
 
-      * In the AWS Management Console, create an S3 bucket (e.g., `swachh-sahayak-website-[yourname]`).
+      * In the AWS Management Console, create an S3 bucket (e.g., `swachh-sahayak-website-[priyanvi]`).
       * Enable **Static Website Hosting** for this bucket.
       * Configure a **Bucket Policy** to allow public read access to its objects (essential for a public website).
         ```json
@@ -128,25 +128,25 @@ This section describes the robust, event-driven serverless backend specifically 
 1.  **Create S3 Buckets for Images:**
 
       * Create two new S3 buckets:
-          * `swachh-sahayak-original-images-[yourname]` (for raw uploads).
-          * `swachh-sahayak-processed-images-[yourname]` (for processed images).
-      * Configure **CORS (Cross-Origin Resource Sharing)** on your `swachh-sahayak-original-images-[yourname]` bucket to allow uploads from your static website domain (your CloudFront URL or S3 static website endpoint from Part 1).
+          * `swachh-sahayak-original-images-[priyanvi]` (for raw uploads).
+          * `swachh-sahayak-processed-images-[priyanvi]` (for processed images).
+      * Configure **CORS (Cross-Origin Resource Sharing)** on your `swachh-sahayak-original-images-[priyanvi]` bucket to allow uploads from your static website domain (your CloudFront URL or S3 static website endpoint from Part 1).
 
 2.  **Develop AWS Lambda Function:**
 
       * Create your Lambda function code (e.g., `lambda_function.py`). This code will:
           * Receive event data from S3 (containing bucket name and object key).
-          * Download the original image from `swachh-sahayak-original-images-[yourname]`.
+          * Download the original image from `swachh-sahayak-original-images-[priyanvi]`.
           * Perform image processing (e.g., resizing to 800px width, compressing quality, adding a watermark).
-          * Upload the processed image to `swachh-sahayak-processed-images-[yourname]`.
+          * Upload the processed image to `swachh-sahayak-processed-images-[priyanvi]`.
       * Package your Lambda code with any necessary libraries (e.g., `Pillow` for Python).
 
 3.  **Create IAM Role for Lambda:**
 
       * Create an IAM Role for your Lambda function.
       * Attach policies that grant permissions for:
-          * `s3:GetObject` on `swachh-sahayak-original-images-[yourname]`
-          * `s3:PutObject` on `swachh-sahayak-processed-images-[yourname]`
+          * `s3:GetObject` on `swachh-sahayak-original-images-[priyanvi]`
+          * `s3:PutObject` on `swachh-sahayak-processed-images-[priyanvi]`
           * `logs:CreateLogGroup`, `logs:CreateLogStream`, `logs:PutLogEvents` (for CloudWatch logging).
 
 4.  **Deploy AWS Lambda Function:**
@@ -159,7 +159,7 @@ This section describes the robust, event-driven serverless backend specifically 
 
 5.  **Configure S3 Event Trigger for Lambda:**
 
-      * Go to your `swachh-sahayak-original-images-[yourname]` bucket in the S3 console.
+      * Go to your `swachh-sahayak-original-images-[priyanvi]` bucket in the S3 console.
       * Navigate to **Properties** -\> **Event notifications**.
       * Create a new event notification:
           * **Event types:** `All object create events` (`s3:ObjectCreated:*`).
@@ -168,7 +168,7 @@ This section describes the robust, event-driven serverless backend specifically 
 
 6.  **Update Frontend (Part 1) to use Backend:**
 
-      * Modify your `script.js` in the `frontend/` directory to handle image uploads to the `swachh-sahayak-original-images-[yourname]` bucket. This usually involves:
+      * Modify your `script.js` in the `frontend/` directory to handle image uploads to the `swachh-sahayak-original-images-[priyanvi]` bucket. This usually involves:
           * Creating an `AWS.S3` client (ensure you manage credentials securely, e.g., via Cognito Identity Pools for production, or simplified for assignment).
           * Using `s3.upload()` or `s3.putObject()` methods to put the selected file directly into the bucket.
       * After making changes, re-deploy your frontend to S3 (as per Step 4 in Part 1).
@@ -177,7 +177,7 @@ This section describes the robust, event-driven serverless backend specifically 
 
       * Access your application (Part 1).
       * Upload an image.
-      * Check your `swachh-sahayak-processed-images-[yourname]` bucket to see if the processed image appears.
+      * Check your `swachh-sahayak-processed-images-[priyanvi]` bucket to see if the processed image appears.
       * Check CloudWatch logs for your Lambda function for any errors during processing.
 
 -----
