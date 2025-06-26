@@ -1,24 +1,6 @@
-Okay, I've updated the `README.md` to include your email ID and the GitHub repository name.
-
-Remember to replace `[Your-GitHub-Username]` with your actual GitHub username where it appears in the `README.md`.
-
------
-
-````markdown
 # Comprehensive Cloud Infrastructure & Application Deployment ☁️📊🚀
 
 ## A Multi-faceted Cloud Computing Assignment Showcasing Static Web Hosting, Serverless Backend Development, and Infrastructure Monitoring.
-
----
-
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Built with AWS](https://img.shields.io/badge/Cloud-AWS-FF9900.svg?logo=amazon-aws)](https://aws.amazon.com/)
-[![Static Website](https://img.shields.io/badge/Website-Static-green)](https://[YOUR_CLOUDFRONT_DOMAIN_OR_S3_WEBSITE_URL])
-[![Serverless](https://img.shields.io/badge/Backend-Serverless-orange)](https://aws.amazon.com/serverless/)
-[![Monitoring with Grafana](https://img.shields.io/badge/Monitoring-Grafana-F45D00.svg?logo=grafana)](https://grafana.com/)
-[![Observability with Prometheus](https://img.shields.io/badge/Observability-Prometheus-E6522C.svg?logo=prometheus)](https://prometheus.io/)
-
----
 
 ## 🎯 Project Goals & Overview
 
