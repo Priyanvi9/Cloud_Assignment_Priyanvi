@@ -193,23 +193,7 @@ This section focuses on establishing a robust monitoring solution for a Linux se
   * **Dynamic & Customizable Dashboards:** Grafana provides a highly interactive and flexible interface to create stunning visualizations of your server's performance.
   * **CPU Utilization Focus:** Specifically configured to display real-time and historical CPU usage patterns, aiding in performance analysis and troubleshooting.
   * **Scalable Monitoring Stack:** Designed to be horizontally scalable for monitoring multiple Linux instances.
-
-### 🏗️ Architecture
-
-```mermaid
-graph TD
-    subgraph Target Linux Server
-        TL[Linux OS] -->|Exposes Metrics on Port 9100| NE(Node Exporter)
-    end
-
-    subgraph Monitoring Server (e.g., a separate EC2 instance)
-        P(Prometheus) -->|Scrapes Metrics via HTTP| NE
-        G(Grafana) -->|Queries Data with PromQL| P
-    end
-
-    U[User/Admin] -->|Accesses Dashboard on Port 3000| G
-```
-
+  * 
   * **Target Linux Server:** The machine you want to monitor (e.g., an EC2 instance).
   * **Node Exporter:** A lightweight agent installed on the target Linux server. It collects system-level metrics and exposes them over an HTTP endpoint (default port 9100).
   * **Monitoring Server:** A separate Linux server (or VM) where Prometheus and Grafana are installed.
