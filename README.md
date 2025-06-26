@@ -1,8 +1,8 @@
-# Comprehensive Cloud Infrastructure & Application Deployment ☁️📊🚀
+# Comprehensive Cloud Infrastructure & Application Deployment ☁️
 
 ## A Multi-faceted Cloud Computing Assignment Showcasing Static Web Hosting, Serverless Backend Development, and Infrastructure Monitoring.
 
-## 🎯 Project Goals & Overview
+##  Project Goals & Overview
 
 This comprehensive cloud computing assignment demonstrates a wide range of skills in designing, deploying, and managing cloud-native solutions. It is divided into three distinct but complementary parts:
 
@@ -14,7 +14,7 @@ This README provides a detailed overview of the architecture, features, and depl
 
 ---
 
-## 🌍 Part 1: Swachh Sahayak Pledge Application (Frontend)
+##  Part 1: Swachh Sahayak Pledge Application (Frontend)
 
 This section details the user-facing static web application, the "Swachh Sahayak Pledge Application," designed for users to submit cleanliness pledges and upload accompanying images.
 
