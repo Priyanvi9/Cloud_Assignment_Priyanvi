@@ -355,4 +355,4 @@ This project is licensed under the MIT License - see the [LICENSE](https://www.g
 ## 📧 Contact
 
   * **Priyanvi Gupta** - priyanvigupta869@gmail.com
-  * **Project Repository:** [https://github.com/[Your-GitHub-Username]/Cloud\_Assignment\_Priyanvi](https://www.google.com/search?q=https://github.com/%5BYour-GitHub-Username%5D/Cloud_Assignment_Priyanvi)
+  * **Project Repository:** [https://github.com/Priyanvi9/Cloud\_Assignment\_Priyanvi](https://www.google.com/search?q=https://github.com/%5BYour-GitHub-Username%5D/Cloud_Assignment_Priyanvi)
